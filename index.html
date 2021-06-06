@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Clipboard landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Bai Jamjuree', sans-serif;
+    }
+    .head-container{
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 999;
+    }
+    .head{
+      text-align: center;
+      align-items: center;
+      padding-top: 7rem;
+      background: url(images/bg-header-desktop.png) no-repeat 50%/cover;
+    }
+    .logo{
+      margin-top: 50px;
+      width: 120px;
+    }
+    .logo-h1{
+      margin-top: 30px;
+      font-size: 40px;
+      color: hsl(210, 10%, 33%);
+    }
+    .para1{
+      max-width: 750px;
+      font-size: 20px;
+      color: lightslategray;
+      line-height: 1.5;
+      letter-spacing: .5px;
+      margin: 0 auto 45px;
+      margin-top: 20px;
+    }
+    .head-btn-1{
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-bottom: 5px hsl(171, 68%, 34%) solid;
+      border-radius: 30px;
+      background-color: hsl(171, 66%, 44%);
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .head-btn-1 a{
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .head-btn-1:hover{
+      background-color: hsl(171, 68%, 34%);
+      transition: all 0.3s ease-out;
+    }
+    .head-btn-2{
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-bottom: 5px hsl(233, 65%, 59%) solid;
+      border-radius: 30px;
+      background-color: hsl(233, 100%, 69%);
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .head-btn-2 a{
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .head-btn-2:hover{
+      background-color: hsl(233, 65%, 59%);
+      transition: all 0.3s ease-out;
+    }
+
+
+    .main-yazı{
+      text-align: center;
+      margin-top: 100px;
+    }
+    .main-h1{
+      font-size: 40px;
+      color: hsl(210, 10%, 33%);
+    }
+    .main-para{
+      max-width: 750px;
+      font-size: 20px;
+      color: lightslategray;
+      line-height: 1.5;
+      letter-spacing: .5px;
+      margin: 0 auto 45px;
+      margin-top: 20px;
+    }
+
+    .bilgi{
+      display: flex;
+      margin-top: 130px;
+    }
+    .comp-foto{
+      margin-left: -30px;
+      display: inline-block;
+      width: 800px;
+    }
+    .genel-b{
+      display: flex;
+      flex-direction: column;
+    }
+    .b-1{
+      margin-bottom: 50px;
+      margin-left: 50px;
+    }
+    .b-1 p{
+      max-width: 350px;
+      font-size: 17px;
+      color: lightslategray;
+    }
+    .b-1 h2{
+      color: hsl(210, 10%, 33%);
+      margin-bottom: 30px;
+    }
+    .bos-yazi{
+      text-align: center;
+      margin-top: 150px;
+    }
+    .bos-yazi h1{
+      font-size: 40px;
+      color: hsl(210, 10%, 33%);
+    }
+    .bos-yazi p{
+      font-size: 20px;
+      color: lightslategray;
+      max-width: 750px;
+      margin: 0 auto 45px;
+      margin-top: 20px;
+      line-height: 1.5;
+      letter-spacing: 0.5;
+    }
+    .phone{
+      align-items: center;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .baslik-phone{
+      text-align: center;
+      margin-top: 80px;
+    }
+    .baslik-phone h1{
+      font-size: 40px;
+      color: hsl(210, 10%, 33%);
+    }
+    .baslik-phone p{
+      font-size: 20px;
+      color: lightslategray;
+      margin-top: 20px;
+    }
+
+    .icons{
+      display: flex;
+      margin-top: 100px;
+      text-align: center;
+      margin-right: 80px;
+      margin-left: 80px;
+    }
+    .icon-1{
+      margin-right: 40px;
+    }
+    .icon-1 img{
+      margin-bottom: 30px;
+    }
+    .icon-1 h2{
+      margin-bottom: 20px;
+      color: hsl(210, 10%, 33%);
+      font-size: 1.8rem;
+    }
+    .icon-1 p{
+      color: lightslategray;
+      max-width: 350px;
+      font-size: 18px;
+    }
+    .logolar{
+      margin-top: 180px;
+      text-align: center;
+    }
+    .logolar img{
+      margin-right: 80px;
+    }
+
+    .ios{
+      text-align: center;
+      margin-top: 180px;
+    }
+    .ios h1{
+      font-size: 40px;
+      color: hsl(210, 10%, 33%);
+      margin-bottom: 20px;
+    }
+    .ios p{
+      font-size: 20px;
+      color: lightslategray;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+    .ios-btn{
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-bottom: 5px hsl(171, 68%, 34%) solid;
+      border-radius: 30px;
+      background-color: hsl(171, 66%, 44%);
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .ios-btn a{
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+    }
+    .ios-btn:hover{
+      background-color: hsl(171, 68%, 34%);
+      transition: all 0.3s ease-out;
+    }
+    .mac-btn{
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-bottom: 5px hsl(233, 65%, 59%) solid;
+      border-radius: 30px;
+      background-color: hsl(233, 100%, 69%);
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .mac-btn a{
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+    }
+    .mac-btn:hover{
+      background-color: hsl(233, 65%, 59%);
+      transition: all 0.3s ease-out;
+    }
+
+    .footer{
+      background-color: lightgray;
+      margin-top: 100px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-logo{
+      display: inline-block;
+    }
+    .footer-logo img{
+      width: 50px;
+      display: inline-block;
+      margin-right: 100px;
+    }
+    .footer-heading{
+      margin-right: 50px;
+    }
+    .footer-heading a{
+      text-decoration: none;
+      color:hsl(210, 10%, 33%);
+      font-size: 20px;
+      margin-right: 30px;
+    }
+    .footer-heading a:hover{
+      color: hsl(171, 66%, 44%);
+      transition: all 0.3s ease-out;
+    }
+    .son-icon img{
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="genel">
+    <div class="first">
+      <div class="head-container">
+        <div class="head">
+            <img src="images/logo.svg" class="logo" alt="">
+            <h1 class="logo-h1">A history of everything you copy</h1>
+            <p class="para1">Clipboard allows you to track and organize everything you 
+              copy. Instantly access your clipboard on all your devices.</p>
+              <button class="head-btn-1"><a href="#">Download for iOS</a></button>
+              <button class="head-btn-2"><a href="#">Download for Mac</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main-yazı">
+    <div class="yazı">
+      <h1 class="main-h1">Keep track of your snippets</h1>
+      <p class="main-para">Clipboard instantly stores any item you copy in the cloud, 
+        meaning you can access your snippets immediately on all your 
+        devices. Our Mac and iOS apps will help you organize everything.
+      </p>
+    </div>
+  </div>
+
+  <div class="computer">
+    <div class="bilgi">
+      <img src="images/image-computer.png" class="comp-foto" alt="">
+      <div class="genel-b">
+        <div class="b-1">
+          <h2>Quick Search</h2>
+          <p>Easily search your snippets by content, category, web address, application, and more.</p>
+        </div>
+        <div class="b-1">
+          <h2>iColud Sync</h2>
+          <p>Instantly saves and syncs snippets across all your devices.</p>
+        </div>
+        <div class="b-1">
+          <h2>Complete History</h2>
+          <p>Retrieve any snippets from the first moment you started using the app.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bos-yazi">
+      <h1>Access Clipboard anywhere</h1>
+      <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
+        snippets in a few simple clicks.</p>
+    </div>
+
+    <div class="phone">
+      <img src="images/image-devices.png" class="phone-img" alt="">
+    </div>
+
+    <div class="baslik-phone">
+      <h1>Supercharge your workflow</h1>
+      <p>We’ve got the tools to boost your productivity.</p>
+    </div>
+
+    <div class="icons">
+      <div class="icon-1">
+        <img src="images/icon-blacklist.svg" alt="">
+        <h2>Create Blacklist</h2>
+        <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      </div>
+      <div class="icon-1">
+        <img src="images/icon-text.svg" alt="">
+        <h2>Plain text snippets</h2>
+        <p>Remove unwanted formatting from copied text for a consistent look.</p>
+      </div>
+      <div class="icon-1">
+        <img src="images/icon-preview.svg" alt="">
+        <h2>Sneak preview</h2>
+        <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+      </div>
+    </div>
+
+    <div class="logolar">
+      <img src="images/logo-google.png" alt="">
+      <img src="images/logo-ibm.png" alt="">
+      <img src="images/logo-microsoft.png" alt="">
+      <img src="images/logo-hp.png" alt="">
+      <img src="images/logo-vector-graphics.png" alt="">
+    </div>
+
+    <div class="ios">
+      <h1>Clipboard for iOS and Mac OS</h1>
+      <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+        and you’re ready to start adding to your clipboard.</p>
+        <button class="ios-btn"><a href="#">Download for iOS</a></button>
+        <button class="mac-btn"><a href="#">Download for MAC</a></button>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="footer-heading">
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Install Guide</a>
+        <a href="#">Contact</a>
+        <a href="#">Press Kit</a>
+      </div>
+      <div class="son-icon">
+       <a href="#"> <img src="images/icon-instagram.svg" alt=""></a>
+       <a href="#"> <img src="images/icon-facebook.svg" alt=""></a>
+       <a href="#"> <img src="images/icon-twitter.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- A history of everything you copy
+
+  Clipboard allows you to track and organize everything you 
+  copy. Instantly access your clipboard on all your devices.
+
+  Download for iOS
+  Download for Mac
+
+  Keep track of your snippets
+
+  Clipboard instantly stores any item you copy in the cloud, 
+  meaning you can access your snippets immediately on all your 
+  devices. Our Mac and iOS apps will help you organize everything.
+
+  Quick Search
+
+  Easily search your snippets by content, category, web address, application, and more.
+
+  iCloud Sync
+
+  Instantly saves and syncs snippets across all your devices.
+
+  Complete History
+
+  Retrieve any snippets from the first moment you started using the app.
+
+  Access Clipboard anywhere
+
+  Whether you’re on the go, or at your computer, you can access all your Clipboard 
+  snippets in a few simple clicks.
+
+  Supercharge your workflow
+
+  We’ve got the tools to boost your productivity.
+
+  Create blacklists
+
+  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+
+  Plain text snippets
+
+  Remove unwanted formatting from copied text for a consistent look.
+
+  Sneak preview
+
+  Quick preview of all snippets on your Clipboard for easy access.
+
+  Clipboard for iOS and Mac OS
+
+  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+  and you’re ready to start adding to your clipboard.
+
+  Download for iOS
+  Download for Mac
+
+  FAQs
+  Contact Us
+  Privacy Policy
+  Press Kit
+  Install Guide
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>-->
+</body>
+</html>
